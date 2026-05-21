@@ -1,0 +1,201 @@
+.sidebar,
+.navLink,
+.navLinkActive {
+  box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    min-height: 100dvh;
+    width: 320px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo, .storeName {
+    font-family: var(--font-display);
+    color: var( --text-blush);
+}
+
+  .logo {
+    width: 88px;
+    height: 88px;
+    border: 2px solid var(--text-blush);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .brandText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .storeName {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .storeDesc {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--text-blushmid);
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+  
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+    background: var(--card-bg) ;
+    color: var(--text-main);
+}
+.navLinkActive {
+    background-color: var(--sidebar);
+    max-width: 300px;
+    width: 100%;
+    color: var(--card-bg);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+      width: 260px;
+      padding: 28px 22px;
+      gap: 32px;
+    }
+  
+    .logo {
+      width: 72px;
+      height: 72px;
+      font-size: 26px;
+    }
+  
+    .storeName {
+      font-size: 24px;
+    }
+  
+    .storeDesc {
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+  
+    .navLink {
+      padding: 14px 16px;
+      font-size: 15px;
+    }
+  
+    .navLinkActive {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  
+  /* Phone */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      min-height: auto;
+      padding: 20px 16px;
+      gap: 24px;
+    }
+  
+    .brand {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+  
+    .logo {
+      width: 58px;
+      height: 58px;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+  
+    .brandText {
+      gap: 4px;
+    }
+  
+    .storeName {
+      font-size: 22px;
+    }
+  
+    .storeDesc {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+  
+    .navLink {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+  
+    .navLinkActive {
+      width: 100%;
+      max-width: none;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+  }
+  
+  
+  /* Small phones */
+  @media (max-width: 480px) {
+    .sidebar {
+      padding: 18px 14px;
+    }
+  
+    .brand {
+      gap: 12px;
+    }
+  
+    .logo {
+      width: 52px;
+      height: 52px;
+      font-size: 20px;
+    }
+  
+    .storeName {
+      font-size: 20px;
+    }
+  
+    .storeDesc {
+      font-size: 9px;
+      letter-spacing: 1.6px;
+    }
+  
+    .navLink {
+      font-size: 14px;
+      padding: 11px 12px;
+    }
+  }

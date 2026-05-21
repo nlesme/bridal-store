@@ -1,0 +1,252 @@
+.containerTable {
+    background-color: var(--table-bg);
+    border-radius: 14px;
+    border: 1px solid var(--text-muted);
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .headerTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+  
+  .headerTitle {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 20px;
+  }
+  
+  .filterTable {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filters {
+    color: var(--text-muted);
+    background-color: var(--card-bg);
+    border: 1px solid var(--text-muted);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+  
+  .tableHead {
+    color: var(--text-muted);
+    background-color: var(--card-bg);
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-top: 1px solid var(--text-muted);
+    border-bottom: 1px solid var(--text-muted);
+    white-space: nowrap;
+  }
+  
+  .table td {
+    background-color: var(--table-bg);
+    color: var(--text-main);
+  }
+  
+  .sourceOrderId {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .source {
+    color: var(--text-muted);
+  }
+  
+
+  .orderPaid,
+  .orderPending,
+  .orderCancelled,
+  .orderRefund {
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .orderPaid {
+    color: var(--success);
+  }
+  
+  .orderPending {
+    color: var(--text-main);
+  }
+  
+  .orderCancelled {
+    color: var(--danger);
+  }
+  
+  .orderRefund {
+    color: var(--info);
+  }
+  
+  .btnDetails {
+    background-color: var(--text-main);
+    border-radius: 10px;
+    color: var(--card-bg);
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .btnDetails:hover {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+  }
+
+@media (max-width: 1024px) {
+    .containerTable {
+      border-radius: 12px;
+    }
+  
+    .headerTable {
+      padding: 16px 18px;
+      gap: 14px;
+    }
+  
+    .headerTitle {
+      font-size: 18px;
+    }
+  
+    .filterTable {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  
+    .filters {
+      font-size: 14px;
+      padding: 9px 11px;
+    }
+  
+    .table table {
+      min-width: 720px;
+    }
+  
+    .table th,
+    .table td {
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+  
+    .btnDetails {
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+  }
+ 
+  @media (max-width: 768px) {
+    .containerTable {
+      border-radius: 12px;
+      width: 100%;
+    }
+  
+    .headerTable {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+      gap: 14px;
+    }
+  
+    .headerTitle {
+      font-size: 17px;
+    }
+  
+    .filterTable {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .filters {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  
+    .table {
+      overflow-x: auto;
+    }
+  
+    .table table {
+      min-width: 680px;
+    }
+  
+    .tableHead {
+      font-size: 11px;
+    }
+  
+    .table th,
+    .table td {
+      padding: 11px 12px;
+      font-size: 13px;
+    }
+  
+    .orderPaid,
+    .orderPending,
+    .orderCancelled,
+    .orderRefund {
+      font-size: 13px;
+    }
+  
+    .btnDetails {
+      padding: 7px 9px;
+      font-size: 12px;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .headerTable {
+      padding: 14px;
+    }
+  
+    .headerTitle {
+      font-size: 16px;
+    }
+  
+    .filters {
+      font-size: 13px;
+    }
+  
+    .table table {
+      min-width: 640px;
+    }
+  
+    .table th,
+    .table td {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .btnDetails {
+      font-size: 12px;
+      padding: 6px 8px;
+    }
+  }

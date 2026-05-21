@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.*
+!.env.example
+
+# build files
+dist/
+build/
+generated/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# uploads / temp files
+uploads/
+
+# prisma local artifacts if any
+*.db
+*.db-journal

@@ -1,0 +1,63 @@
+.importContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ 
+.hiddenInput {
+    display: none;
+}
+
+.selectBtn {  
+    background-color: var(--sidebar-bg);
+    color: var(--card-bg) ;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.selectBtn:hover {
+    background-color: var(--card-bg);
+    color: var(--sidebark-bg);
+    border: 1px solid var(--sidebark-bg);
+}
+
+.fileName {
+    color: var(--text-main);
+    font-size: 15px;
+}
+
+.importButton {
+    background-color: var(--primary-light);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 20px 0 20px 20px;
+}
+.importButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.error {
+    color: var(--danger);
+    margin: 20px;
+}
+
+.success {
+    color: var(--success);
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+   .importButton{
+    margin: 20px;
+   }
+}
+

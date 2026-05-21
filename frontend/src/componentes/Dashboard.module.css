@@ -1,0 +1,91 @@
+.header,
+.titleDesc,
+.title,
+.periodSummary,
+.contentTop{
+  box-sizing: border-box;
+}
+
+.contentTop {
+  display: flex;
+  justify-content: space-between;
+
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.titleDesc {
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--info);
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.periodSummary {
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .header {
+      margin-top: 16px;
+      margin-bottom: 18px;
+    }
+  
+    .title {
+      font-size: 34px;
+    }
+  
+    .titleDesc {
+      letter-spacing: 4px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+  
+    .titleDesc {
+      font-size: 11px;
+      letter-spacing: 3px;
+      line-height: 1.4;
+    }
+  
+    .title {
+      font-size: 28px;
+      line-height: 1.1;
+    }
+  
+    .periodSummary {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titleDesc {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .periodSummary {
+      font-size: 13px;
+    }
+  }

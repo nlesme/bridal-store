@@ -1,0 +1,31 @@
+.appLayout,
+.mainContent {
+  box-sizing: border-box;
+}
+
+.appLayout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 32px;
+    background-color: var(--bg-main);
+  }
+
+@media (max-width: 768px) {
+    .appLayout {
+      flex-direction: column;
+    }
+  
+    .mainContent {
+      padding: 20px 16px;
+    }
+  }
+  
+@media (max-width: 480px) {
+    .mainContent {
+      padding: 16px 12px;
+    }
+  }

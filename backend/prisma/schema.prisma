@@ -1,0 +1,96 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+  
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Source {
+  PARTY
+  ONLINE
+}
+
+enum OrderStatus {
+  PAID
+  REFUNDED
+  PARTIALLY_REFUNDED
+  PARTIALLY_PENDING
+  CANCELLED
+  PARTIALLY_CANCELLED
+  PENDING
+}
+
+enum ItemStatus {
+  PAID
+  REFUNDED
+  CANCELLED
+  PENDING
+}
+
+enum ImportStatus {
+  SUCCESS
+  FAILED
+  PARTIAL_SUCCESS
+}
+
+model User {
+  id            Int @id @default(autoincrement())
+  name          String?
+  email         String @unique
+  passwordHash  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Order {
+  id              Int @id @default(autoincrement())
+  source          Source 
+  sourceOrderId   String 
+  customerName    String?
+  soldAt          DateTime
+  status          OrderStatus @default(PENDING)
+  total           Decimal
+  refundedTotal   Decimal @default(0)
+  cancelledTotal  Decimal @default(0)
+  refundedAt      DateTime?
+  items           OrderItem[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([source, sourceOrderId])
+}
+
+model OrderItem {
+  id                Int @id @default(autoincrement())
+  productName       String
+  sku               String 
+  itemStatus        ItemStatus @default(PENDING)
+  quantity          Int
+  unitPrice         Decimal
+  lineTotal         Decimal
+  orderId           Int
+  order             Order @relation(fields: [orderId], references: [id])
+  refundedQuantity  Int @default(0)
+  refundedLineTotal Decimal @default(0)
+  cancelledQuantity Int @default(0)
+  cancelledLineTotal Decimal @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model ImportFile {
+  id                Int @id @default(autoincrement())
+  fileName          String 
+  source            Source
+  status            ImportStatus 
+  importedRows      Int
+  failedRows        Int
+  createdAt         DateTime @default(now())
+}

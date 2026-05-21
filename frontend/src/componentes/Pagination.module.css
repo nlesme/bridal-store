@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.btnPage {
+   background-color: var(--card-bg);
+    border: 2px solid var(--border-soft);
+    font-size: 15px;
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+}

@@ -1,0 +1,38 @@
+:root {
+  --bg-main: #FDFAF6;
+  --card-bg: #F9F5F0;
+  --border-soft: #EDE8E3;
+  --table-bg: #ffffff;
+
+  --text-main: #4A3C36;
+  --text-muted: #7A6E68;
+  --text-thrid: #ADA49E;
+  --text-blush: #E8D5C4;
+  --text-blushmid: #D4B8A2;
+
+  --primary:#D4B8A2;
+  --primary-light: #E8D5C4;
+
+  --success: #5A7A5A;
+  --success-bg: #EBF1EB;
+
+  --danger: #D9535F;
+  --danger-bg: #F8DDE1;
+
+  --info: #8A7020;
+  --info-bg: #F5EED8;
+
+  --sidebar-bg: #1a1410;
+  --sidebar: #2C2420;
+
+  --font-display: "Playfair Display", serif;
+  --font-text: "Jost", sans-serif;
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+}
+
+
