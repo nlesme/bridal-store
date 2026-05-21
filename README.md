@@ -146,7 +146,5 @@ This version was built as a practical and scalable foundation for future iterati
 
 ## Author
 
-## Author
-
 **Norbelis L**  
 Junior Web Developer focused on React, responsive interfaces, and growing into full-stack development.
